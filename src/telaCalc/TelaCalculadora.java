@@ -1,6 +1,7 @@
 package telaCalc;
 
 import java.awt.event.*;
+import java.awt.Toolkit;
 
 public class TelaCalculadora extends javax.swing.JFrame {
 
@@ -11,8 +12,13 @@ public class TelaCalculadora extends javax.swing.JFrame {
 
     public TelaCalculadora() {
         initComponents();
+       
+        inicia();
     }
 
+    private void inicia() {
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("calculadora.png")));
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -190,7 +196,9 @@ public class TelaCalculadora extends javax.swing.JFrame {
             }
         });
 
+        botaoSubtracao.setBackground(new java.awt.Color(255, 102, 0));
         botaoSubtracao.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        botaoSubtracao.setForeground(new java.awt.Color(255, 255, 255));
         botaoSubtracao.setText("-");
         botaoSubtracao.setBorder(null);
         botaoSubtracao.addActionListener(new java.awt.event.ActionListener() {
@@ -204,7 +212,9 @@ public class TelaCalculadora extends javax.swing.JFrame {
             }
         });
 
+        botaoMultiplica.setBackground(new java.awt.Color(255, 102, 0));
         botaoMultiplica.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        botaoMultiplica.setForeground(new java.awt.Color(255, 255, 255));
         botaoMultiplica.setText("x");
         botaoMultiplica.setBorder(null);
         botaoMultiplica.addActionListener(new java.awt.event.ActionListener() {
@@ -218,7 +228,9 @@ public class TelaCalculadora extends javax.swing.JFrame {
             }
         });
 
+        botaoSoma.setBackground(new java.awt.Color(255, 102, 0));
         botaoSoma.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        botaoSoma.setForeground(new java.awt.Color(255, 255, 255));
         botaoSoma.setText("+");
         botaoSoma.setBorder(null);
         botaoSoma.addActionListener(new java.awt.event.ActionListener() {
@@ -246,7 +258,9 @@ public class TelaCalculadora extends javax.swing.JFrame {
             }
         });
 
+        botaoApaga.setBackground(new java.awt.Color(255, 102, 0));
         botaoApaga.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        botaoApaga.setForeground(new java.awt.Color(255, 255, 255));
         botaoApaga.setText("C");
         botaoApaga.setBorder(null);
         botaoApaga.addActionListener(new java.awt.event.ActionListener() {
@@ -260,7 +274,9 @@ public class TelaCalculadora extends javax.swing.JFrame {
             }
         });
 
+        botaoVirgula.setBackground(new java.awt.Color(255, 102, 0));
         botaoVirgula.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        botaoVirgula.setForeground(new java.awt.Color(255, 255, 255));
         botaoVirgula.setText(",");
         botaoVirgula.setBorder(null);
         botaoVirgula.addActionListener(new java.awt.event.ActionListener() {
@@ -274,7 +290,9 @@ public class TelaCalculadora extends javax.swing.JFrame {
             }
         });
 
+        botaoDivide.setBackground(new java.awt.Color(255, 102, 0));
         botaoDivide.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        botaoDivide.setForeground(new java.awt.Color(255, 255, 255));
         botaoDivide.setText("/");
         botaoDivide.setBorder(null);
         botaoDivide.addActionListener(new java.awt.event.ActionListener() {
@@ -288,7 +306,9 @@ public class TelaCalculadora extends javax.swing.JFrame {
             }
         });
 
+        botaoIgual.setBackground(new java.awt.Color(255, 102, 0));
         botaoIgual.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        botaoIgual.setForeground(new java.awt.Color(255, 255, 255));
         botaoIgual.setText("=");
         botaoIgual.setBorder(null);
         botaoIgual.addActionListener(new java.awt.event.ActionListener() {
@@ -302,7 +322,9 @@ public class TelaCalculadora extends javax.swing.JFrame {
             }
         });
 
+        botaoAlterador.setBackground(new java.awt.Color(255, 102, 0));
         botaoAlterador.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        botaoAlterador.setForeground(new java.awt.Color(255, 255, 255));
         botaoAlterador.setText("+/-");
         botaoAlterador.setBorder(null);
         botaoAlterador.addActionListener(new java.awt.event.ActionListener() {
