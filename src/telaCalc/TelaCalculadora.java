@@ -12,7 +12,6 @@ public class TelaCalculadora extends javax.swing.JFrame {
 
     public TelaCalculadora() {
         initComponents();
-       
         inicia();
     }
 
@@ -49,6 +48,7 @@ public class TelaCalculadora extends javax.swing.JFrame {
         botaoAlterador = new javax.swing.JButton();
         telaHistorico = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        botaoQuadrado = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
@@ -345,58 +345,85 @@ public class TelaCalculadora extends javax.swing.JFrame {
 
         jLabel1.setText("<html>\n&copy; Developed by Ícaro Falcão.");
 
+        botaoQuadrado.setBackground(new java.awt.Color(255, 102, 0));
+        botaoQuadrado.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        botaoQuadrado.setForeground(new java.awt.Color(255, 255, 255));
+        botaoQuadrado.setText("x²");
+        botaoQuadrado.setBorder(null);
+        botaoQuadrado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoQuadradoActionPerformed(evt);
+            }
+        });
+        botaoQuadrado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                botaoQuadradoKeyPressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(telaHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tela, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(botao7, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(botao1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(botao2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(botao0, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(botaoVirgula, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(10, 10, 10)
-                        .addComponent(botao8, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(botao9, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(botaoMultiplica, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(botaoDivide, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botaoApaga, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(botao3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(39, 39, 39)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(botaoSoma, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(botaoQuadrado, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(botaoIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(51, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(botao4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(botao5, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(botao6, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(botaoSubtracao, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(botaoAlterador, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(botao1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(botao2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(botao3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(botaoSoma, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(botaoApaga, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(botao0, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(botaoVirgula, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(botaoIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(50, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(telaHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tela, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(botao7, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(botao8, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(botao9, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(40, 40, 40)
+                                        .addComponent(botaoMultiplica, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(botaoDivide, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(botao4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(botao5, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(botao6, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(40, 40, 40)
+                                        .addComponent(botaoSubtracao, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(botaoAlterador, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addContainerGap(34, Short.MAX_VALUE)
                 .addComponent(telaHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addComponent(tela, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -418,15 +445,17 @@ public class TelaCalculadora extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(botao1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botao2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botao3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoSoma, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoApaga, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(botao3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botaoSoma, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botaoQuadrado, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(botao0, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoApaga, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaoVirgula, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botao0, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaoIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -490,52 +519,152 @@ public class TelaCalculadora extends javax.swing.JFrame {
     }
 
     private void botao7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao7ActionPerformed
-        String texto = tela.getText() + botao7.getText();
-        tela.setText(texto);
+        if (telaHistorico.getText().contains("=")) {
+           
+            tela.setText(botao7.getText());
+            telaHistorico.setText("");
+        } 
+        else {
+        
+            String texto = tela.getText() + botao7.getText();
+
+            if (tela.getText().equals("") || Integer.parseInt(texto) < Integer.MAX_VALUE) {
+
+                tela.setText(texto);
+            }
+        }
     }//GEN-LAST:event_botao7ActionPerformed
 
     private void botao9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao9ActionPerformed
-        String texto = tela.getText() + botao9.getText();
-        tela.setText(texto);
+        if (telaHistorico.getText().contains("=")) {
+           
+            tela.setText(botao9.getText());
+            telaHistorico.setText("");
+        } 
+        else {
+        
+            String texto = tela.getText() + botao9.getText();
+
+            if (tela.getText().equals("") || Integer.parseInt(texto) < Integer.MAX_VALUE) {
+
+                tela.setText(texto);
+            }
+        }
     }//GEN-LAST:event_botao9ActionPerformed
 
     private void botao8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao8ActionPerformed
-        String texto = tela.getText() + botao8.getText();
-        tela.setText(texto);
+        if (telaHistorico.getText().contains("=")) {
+           
+            tela.setText(botao8.getText());
+            telaHistorico.setText("");
+        } 
+        else {
+        
+            String texto = tela.getText() + botao8.getText();
+
+            if (tela.getText().equals("") || Integer.parseInt(texto) < Integer.MAX_VALUE) {    
+
+                tela.setText(texto);
+            }
+        }
     }//GEN-LAST:event_botao8ActionPerformed
 
     private void botao4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao4ActionPerformed
-        String texto = tela.getText() + botao4.getText();
-        tela.setText(texto);
+        if (telaHistorico.getText().contains("=")) {
+           
+            tela.setText(botao4.getText());
+            telaHistorico.setText("");
+        } 
+        else {
+            String texto = tela.getText() + botao4.getText();
+
+            if (tela.getText().equals("") || Integer.parseInt(texto) < Integer.MAX_VALUE) {
+
+                tela.setText(texto); 
+            }
+        }
     }//GEN-LAST:event_botao4ActionPerformed
 
     private void botao6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao6ActionPerformed
-        String texto = tela.getText() + botao6.getText();
-        tela.setText(texto);
+        if (telaHistorico.getText().contains("=")) {
+           
+            tela.setText(botao6.getText());
+            telaHistorico.setText("");
+        } 
+        else {
+            String texto = tela.getText() + botao6.getText();
+
+            if (tela.getText().equals("") || Integer.parseInt(texto) < Integer.MAX_VALUE) {
+
+                tela.setText(texto);
+            }
+        }
     }//GEN-LAST:event_botao6ActionPerformed
 
     private void botao5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao5ActionPerformed
-        String texto = tela.getText() + botao5.getText();
-        tela.setText(texto);
+        if (telaHistorico.getText().contains("=")) {
+           
+            tela.setText(botao5.getText());
+            telaHistorico.setText("");
+        } 
+        else {
+            String texto = tela.getText() + botao5.getText();
+
+            if (tela.getText().equals("") || Integer.parseInt(texto) < Integer.MAX_VALUE) {
+
+                tela.setText(texto); 
+            }
+        }
     }//GEN-LAST:event_botao5ActionPerformed
 
     private void botao2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao2ActionPerformed
-        String texto = tela.getText() + botao2.getText();
-        tela.setText(texto);
+        if (telaHistorico.getText().contains("=")) {
+           
+            tela.setText(botao2.getText());
+            telaHistorico.setText("");
+        } 
+        else {
+            String texto = tela.getText() + botao2.getText();
+
+            if (tela.getText().equals("") || Integer.parseInt(texto) < Integer.MAX_VALUE) {
+                tela.setText(texto);
+            }
+        }
     }//GEN-LAST:event_botao2ActionPerformed
 
     private void botao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao1ActionPerformed
-        String texto = tela.getText() + botao1.getText();
-        tela.setText(texto);
+        if (telaHistorico.getText().contains("=")) {
+           
+            tela.setText(botao1.getText());
+            telaHistorico.setText("");
+        } 
+        else {
+            String texto = tela.getText() + botao1.getText();
+
+            if (tela.getText().equals("") || Integer.parseInt(texto) < Integer.MAX_VALUE) {
+
+                tela.setText(texto); 
+            }
+        }
     }//GEN-LAST:event_botao1ActionPerformed
 
     private void botao3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao3ActionPerformed
-        String texto = tela.getText() + botao3.getText();
-        tela.setText(texto);
+        if (telaHistorico.getText().contains("=")) {
+           
+            tela.setText(botao3.getText());
+            telaHistorico.setText("");
+        } 
+        else {
+            String texto = tela.getText() + botao3.getText();
+
+            if (tela.getText().equals("") || Integer.parseInt(texto) < Integer.MAX_VALUE) {
+                tela.setText(texto); 
+            }
+        }
     }//GEN-LAST:event_botao3ActionPerformed
 
     private void botaoSubtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSubtracaoActionPerformed
-        if (tela.getText() == "") {
+        if (tela.getText().equals("")) {
             tela.setText("-");
         } else {
             primeiroNumero = Double.parseDouble(tela.getText().replace(',', '.'));
@@ -555,7 +684,7 @@ public class TelaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoMultiplicaActionPerformed
 
     private void botaoSomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSomaActionPerformed
-        if (tela.getText() == "") {
+        if (tela.getText().equals("")) {
             tela.setText("+");
         } else {
             primeiroNumero = Double.parseDouble(tela.getText().replace(',', '.'));
@@ -568,7 +697,10 @@ public class TelaCalculadora extends javax.swing.JFrame {
 
     private void botao0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao0ActionPerformed
         String texto = tela.getText() + botao0.getText();
-        tela.setText(texto);
+        
+        if (tela.getText().equals("") || Integer.parseInt(texto) < Integer.MAX_VALUE) {
+            tela.setText(texto);
+        }
     }//GEN-LAST:event_botao0ActionPerformed
 
     private void botaoApagaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoApagaActionPerformed
@@ -592,28 +724,34 @@ public class TelaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoDivideActionPerformed
 
     private void botaoIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIgualActionPerformed
-        segundoNumero = Double.parseDouble(tela.getText().replace(',', '.'));
-
-        if (operacao.equals("-")) {
-            resultado = primeiroNumero - segundoNumero;
-        } else if (operacao.equals("x")) {
-            resultado = primeiroNumero * segundoNumero;
-        } else if (operacao.equals("+")) {
-            resultado = primeiroNumero + segundoNumero;
-        } else if (operacao.equals("/")) {
-            resultado = primeiroNumero / segundoNumero;
-        }
-
-        primeiroNumero = resultado;
-
-        if (resultado > Math.floor(resultado)) {
-            String resposta = String.format("%.2f", resultado);
-            tela.setText(resposta);
+        if (telaHistorico.getText().contains("=")){
+            
         } else {
-            String resposta = String.format("%.0f", resultado);
-            tela.setText(resposta);
+            segundoNumero = Double.parseDouble(tela.getText().replace(',', '.'));
+
+            if (operacao.equals("-")) {
+                resultado = primeiroNumero - segundoNumero;
+            } else if (operacao.equals("x")) {
+                resultado = primeiroNumero * segundoNumero;
+            } else if (operacao.equals("+")) {
+
+                resultado = primeiroNumero + segundoNumero;
+            } else if (operacao.equals("/")) {
+                resultado = primeiroNumero / segundoNumero;
+            }
+
+            primeiroNumero = resultado;
+
+            if (resultado > Math.floor(resultado)) {
+                String resposta = String.format("%.2f", resultado);
+                tela.setText(resposta);
+
+            } else {
+                String resposta = String.format("%.0f", resultado);
+                tela.setText(resposta);
+            }
+            telaHistorico.setText(telaHistorico.getText() + " " + segundoNumero + " =");
         }
-        telaHistorico.setText("");
     }//GEN-LAST:event_botaoIgualActionPerformed
 
     private void botaoAlteradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAlteradorActionPerformed
@@ -702,6 +840,17 @@ public class TelaCalculadora extends javax.swing.JFrame {
         apertaTecla(evt); 
     }//GEN-LAST:event_botaoApagaKeyPressed
 
+    private void botaoQuadradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoQuadradoActionPerformed
+        primeiroNumero = Double.parseDouble(tela.getText());
+        resultado = Math.pow(primeiroNumero, 2);
+        telaHistorico.setText(primeiroNumero + "²" + " =");
+        tela.setText(String.valueOf(resultado));
+    }//GEN-LAST:event_botaoQuadradoActionPerformed
+
+    private void botaoQuadradoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_botaoQuadradoKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botaoQuadradoKeyPressed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -751,6 +900,7 @@ public class TelaCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton botaoDivide;
     private javax.swing.JButton botaoIgual;
     private javax.swing.JButton botaoMultiplica;
+    private javax.swing.JButton botaoQuadrado;
     private javax.swing.JButton botaoSoma;
     private javax.swing.JButton botaoSubtracao;
     private javax.swing.JButton botaoVirgula;

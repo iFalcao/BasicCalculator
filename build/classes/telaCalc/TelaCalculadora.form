@@ -29,60 +29,80 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <Component id="telaHistorico" alignment="0" min="-2" pref="412" max="-2" attributes="0"/>
-                  <Component id="tela" min="-2" pref="412" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="botao7" min="-2" pref="79" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="botao1" min="-2" pref="79" max="-2" attributes="0"/>
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <Component id="botao2" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="botao0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="botaoVirgula" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                       <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                      <Component id="botao8" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                      <Component id="botao9" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
-                      <Component id="botaoMultiplica" min="-2" pref="47" max="-2" attributes="0"/>
-                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                      <Component id="botaoDivide" min="-2" pref="48" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="botaoApaga" max="32767" attributes="0"/>
+                          <Component id="botao3" min="-2" pref="80" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="botaoSoma" min="-2" pref="47" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="botaoQuadrado" min="-2" pref="47" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="botaoIgual" min="-2" pref="113" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="51" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="botao4" min="-2" pref="79" max="-2" attributes="0"/>
-                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                      <Component id="botao5" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                      <Component id="botao6" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
-                      <Component id="botaoSubtracao" min="-2" pref="47" max="-2" attributes="0"/>
-                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                      <Component id="botaoAlterador" min="-2" pref="48" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="botao1" min="-2" pref="79" max="-2" attributes="0"/>
-                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                      <Component id="botao2" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                      <Component id="botao3" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
-                      <Component id="botaoSoma" min="-2" pref="47" max="-2" attributes="0"/>
-                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                      <Component id="botaoApaga" min="-2" pref="48" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="botao0" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                      <Component id="botaoVirgula" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                      <Component id="botaoIgual" min="-2" pref="232" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="telaHistorico" alignment="0" min="-2" pref="412" max="-2" attributes="0"/>
+                                  <Component id="tela" min="-2" pref="412" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="botao7" min="-2" pref="79" max="-2" attributes="0"/>
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="botao8" min="-2" pref="80" max="-2" attributes="0"/>
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="botao9" min="-2" pref="80" max="-2" attributes="0"/>
+                                      <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
+                                      <Component id="botaoMultiplica" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                      <Component id="botaoDivide" min="-2" pref="48" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="botao4" min="-2" pref="79" max="-2" attributes="0"/>
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="botao5" min="-2" pref="80" max="-2" attributes="0"/>
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="botao6" min="-2" pref="80" max="-2" attributes="0"/>
+                                      <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
+                                      <Component id="botaoSubtracao" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                      <Component id="botaoAlterador" min="-2" pref="48" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="50" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
+              <EmptySpace pref="34" max="32767" attributes="0"/>
               <Component id="telaHistorico" min="-2" pref="44" max="-2" attributes="0"/>
               <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
               <Component id="tela" min="-2" pref="67" max="-2" attributes="0"/>
@@ -106,17 +126,20 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="botao1" min="-2" pref="54" max="-2" attributes="0"/>
                   <Component id="botao2" min="-2" pref="54" max="-2" attributes="0"/>
-                  <Component id="botao3" min="-2" pref="54" max="-2" attributes="0"/>
-                  <Component id="botaoSoma" min="-2" pref="54" max="-2" attributes="0"/>
-                  <Component id="botaoApaga" min="-2" pref="54" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="botao3" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                      <Component id="botaoSoma" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                      <Component id="botaoQuadrado" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="botao0" min="-2" pref="54" max="-2" attributes="0"/>
-                  <Component id="botaoVirgula" min="-2" pref="54" max="-2" attributes="0"/>
-                  <Component id="botaoIgual" min="-2" pref="54" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="botaoApaga" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                  <Component id="botaoVirgula" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                  <Component id="botao0" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                  <Component id="botaoIgual" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="41" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -484,6 +507,27 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&amp;copy; Developed by &#xcd;caro Falc&#xe3;o."/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="botaoQuadrado">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="ff" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="24" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="x&#xb2;"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="null"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoQuadradoActionPerformed"/>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="botaoQuadradoKeyPressed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
